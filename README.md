@@ -1,1 +1,5 @@
-# livro_ED_WEB-JavaScript
+# Livro: Estudo Dirigido WEB: JavaScript
+
+A linguagem JavaScript é uma ferramenta poderosa, mas, como toda linguagem de programação, necessita ser aprendida e ensinada com calma e paciência. Neste sentido, está sendo levado em consideração que o leitor possui conhecimentos básicos de lógica de programação, por meio da aplicação de algoritmos computacionais, mas não conhece nada sobre JavaScript. Daí o número reduzido de exercícios de fixação pertinentes à lógica de programação.
+
+Por se tratar de uma obra didática, o ensinamento da linguagem JavaScript é dado de forma básica e gradativa com um grande número de rotinas de exemplos práticos que podem facilmente ser aplicados na montagem de sites ou páginas mais atraentes e dinâmicas. Desta forma, o leitor terá condições de, ao final desta etapa, possuir uma visão e base para prosseguir no seu aprendizado. A obra não abrange a linguagem em sua totalidade; apenas as partes necessárias para programar de forma básica, sendo este trabalho dedicado aos primeiros passos.
