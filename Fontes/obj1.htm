@@ -1,0 +1,32 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+  </HEAD>
+
+  <BODY>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Objeto 1 */
+      var DATA = document.lastModified;
+      var MES, DIA, ANO;
+      if (navigator.appName == 'Netscape') {
+        DIA = DATA.substr(15, 4);
+        MES = DATA.substr(10, 4);
+        ANO = DATA.substr(20, 4); }
+      else {
+        DIA = DATA.substring( 3, 5);
+        MES = DATA.substring( 0, 2);
+        ANO = DATA.substring( 6,10); 
+      }
+      document.write('Última atualização: ' + DIA + '/' + MES + '/' + ANO);
+    //-->
+    </SCRIPT>
+
+  </BODY>
+
+</HTML>

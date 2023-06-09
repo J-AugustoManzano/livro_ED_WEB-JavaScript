@@ -1,0 +1,36 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Evento 4 */
+      function Calcula() {
+        var A = parseFloat(document.Formulario.Numero1.value);
+        var B = parseFloat(document.Formulario.Numero2.value);
+        var C = A + B;
+        document.Formulario.Saida.value = C;
+      }
+    //-->
+    </SCRIPT>
+
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="Formulario">
+      Entre com um valor numérico (Numero1): 
+      <INPUT TYPE="text" NAME="Numero1" SIZE="6">
+      <BR>
+      Entre com um valor numérico (Numero2): 
+      <INPUT TYPE="text" NAME="Numero2" SIZE="6">
+      <BR>
+      Resultado automático da soma:
+      <INPUT TYPE="text" NAME="Saida" SIZE="6" onFocus="Calcula()">
+      <BR>
+    </FORM>
+  </BODY>
+
+</HTML>

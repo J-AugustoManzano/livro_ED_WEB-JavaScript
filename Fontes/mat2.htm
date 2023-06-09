@@ -1,0 +1,39 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Matriz 2 */
+      var I, J;
+      var SAIDA;        
+      var TABELA = new Array(7);
+
+      /* Criação da Matriz */
+
+      for (I=0; I<=7; I++) {
+        TABELA[I] = new Array(4);
+        for (J=0; J<=4; J++) {
+          TABELA[I][J] = ' [Linha ' + I + ', Coluna ' + J + '] ';
+        }
+      }
+
+      /* Apresentação da Matriz */
+
+      for (I=0; I<=7; I++) {
+        SAIDA = '';
+        for (J=0; J<=4; J++) {
+          SAIDA += TABELA[I][J];
+        }
+        document.write(SAIDA, '<BR>');
+      } 
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

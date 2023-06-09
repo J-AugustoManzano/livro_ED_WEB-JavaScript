@@ -1,0 +1,190 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Validação 1 */
+      function Verifica() {
+        var NOME     = document.Formulario.Nome.value;
+        var ENDERECO = document.Formulario.Endereco.value;
+        var CEP      = document.Formulario.CEP.value;
+        var CIDADE   = document.Formulario.Cidade.value;
+        var EMAIL    = document.Formulario.Mail.value;
+        var CPF      = document.Formulario.CPF.value;
+        if (NOME == '' || ENDERECO == '' || CEP == '' || CIDADE == '' ||
+           EMAIL == '' || CPF == '') {
+          alert('Todos os campos do formulário devem estar preenchidos.');
+          return false;
+        }
+      }
+    //-->
+    </SCRIPT>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Validação 2 */
+      function Checa() {
+        var EMAIL = document.Formulario.Mail.value;
+        if (EMAIL.indexOf('@') == -1 || EMAIL.indexOf('.') == -1) {
+          alert('Este e-mail é inválido.');
+          document.Formulario.Mail.value = '';
+          document.Formulario.Mail.focus();
+        }
+      }
+    //-->
+    </SCRIPT>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Validação 3 */
+      function ChecaCPF() {
+        var NUMERO = document.Formulario.CPF.value;
+        var POSICAO, I, SOMA, DV, DV_INFORMADO;
+        var DIGITO = new Array(10);
+                
+        /* Retira do número informado os dois últimos dígitos */
+        DV_INFORMADO = NUMERO.substr( 9, 2);
+
+        /* Desmembra o número do CPF na matriz DIGITO */
+        for (I=0; I<=8; I++) {
+          DIGITO[I] = NUMERO.substr( I, 1);
+        }
+
+        /* Calcula o valor do 10o. digito de verificação */
+        POSICAO = 10;
+        SOMA = 0;
+        for (I=0; I<=8; I++) {
+          SOMA = SOMA + DIGITO[I] * POSICAO;
+          POSICAO = POSICAO - 1;
+        }
+        DIGITO[9] = SOMA % 11;
+        if (DIGITO[9] < 2) {
+          DIGITO[9] = 0; }
+        else {
+          DIGITO[9] = 11 - DIGITO[9];
+        }
+
+        /* Calcula o valor do 11o. digito de verificação */
+        POSICAO = 11;
+        SOMA = 0;
+        for (I=0; I<=9; I++) {
+          SOMA = SOMA + DIGITO[I] * POSICAO;
+          POSICAO = POSICAO - 1;
+        }
+        DIGITO[10] = SOMA % 11;
+        if (DIGITO[10] < 2) {
+          DIGITO[10] = 0; }
+        else {
+          DIGITO[10] = 11 - DIGITO[10];
+        }
+
+        /* Vericica se o DV calculado é igual ao informado */
+        DV = DIGITO[9] * 10 + DIGITO[10];
+        if (DV != DV_INFORMADO) {
+           alert('CPF inválido');
+           document.Formulario.CPF.value = '';
+           document.Formulario.CPF.focus();
+        } 
+      }
+    //-->
+    </SCRIPT>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Validação 4 */
+      function Converte(CAMPO) {
+        CAMPO.value = CAMPO.value.toUpperCase();
+        CAMPO.value = CAMPO.value.replace(/Á/g, 'A');
+        CAMPO.value = CAMPO.value.replace(/À/g, 'A');
+        CAMPO.value = CAMPO.value.replace(/Ä/g, 'A');
+        CAMPO.value = CAMPO.value.replace(/Ã/g, 'A');
+        CAMPO.value = CAMPO.value.replace(/Â/g, 'A');
+        CAMPO.value = CAMPO.value.replace(/Ç/g, 'C');
+        CAMPO.value = CAMPO.value.replace(/É/g, 'E');
+        CAMPO.value = CAMPO.value.replace(/È/g, 'E');
+        CAMPO.value = CAMPO.value.replace(/Ë/g, 'E');
+        CAMPO.value = CAMPO.value.replace(/Ê/g, 'E');
+        CAMPO.value = CAMPO.value.replace(/Í/g, 'I');
+        CAMPO.value = CAMPO.value.replace(/Ì/g, 'I');
+        CAMPO.value = CAMPO.value.replace(/Ï/g, 'I');
+        CAMPO.value = CAMPO.value.replace(/Î/g, 'I');
+        CAMPO.value = CAMPO.value.replace(/Ó/g, 'O');
+        CAMPO.value = CAMPO.value.replace(/Ò/g, 'O');
+        CAMPO.value = CAMPO.value.replace(/Ö/g, 'O');
+        CAMPO.value = CAMPO.value.replace(/Õ/g, 'O');
+        CAMPO.value = CAMPO.value.replace(/Ô/g, 'O');
+        CAMPO.value = CAMPO.value.replace(/Ú/g, 'U');
+        CAMPO.value = CAMPO.value.replace(/Ù/g, 'U');
+        CAMPO.value = CAMPO.value.replace(/Ü/g, 'U');
+        CAMPO.value = CAMPO.value.replace(/Û/g, 'U');
+      }
+    //-->
+    </SCRIPT>
+
+  </HEAD>
+
+  <BODY>
+    <B>
+      Formulário de Cadastro
+    </B>
+    <BR><BR>
+    <FORM NAME="Formulario" onSubmit="return Verifica()" METHOD="post" 
+      ACTION="mailto:seuemail@provedor.com" ENCTYPE="text/plain">
+      <TT>
+        Nome .........: 
+        <INPUT TYPE="text" NAME="Nome" SIZE="45" onChange="Converte(this)"> <BR>
+        Endereço .....: 
+        <INPUT TYPE="text" NAME="Endereco" SIZE="50" onChange="Converte(this)"> <BR>
+        CEP ..........: <INPUT TYPE="text" NAME="CEP" SIZE=" 9"> <BR>
+        Cidade .......: 
+        <INPUT TYPE="text" NAME="Cidade" SIZE="25" onChange="Converte(this)"> 
+        Estado ......:   
+        <SELECT NAME="Estado" SIZE="1">
+          <OPTION VALUE="AC"> AC </OPTION>
+          <OPTION VALUE="AL"> AL </OPTION>
+          <OPTION VALUE="AM"> AM </OPTION>
+          <OPTION VALUE="AP"> AP </OPTION>
+          <OPTION VALUE="BA"> BA </OPTION>
+          <OPTION VALUE="CE"> CE </OPTION>
+          <OPTION VALUE="DF"> DF </OPTION>
+          <OPTION VALUE="ES"> ES </OPTION>
+          <OPTION VALUE="GO"> GO </OPTION>
+          <OPTION VALUE="MA"> MA </OPTION>
+          <OPTION VALUE="MG"> MG </OPTION>
+          <OPTION VALUE="MS"> MS </OPTION>
+          <OPTION VALUE="PA"> PA </OPTION>
+          <OPTION VALUE="PB"> PB </OPTION>
+          <OPTION VALUE="PE"> PE </OPTION>
+          <OPTION VALUE="PI"> PI </OPTION>
+          <OPTION VALUE="PR"> PR </OPTION>
+          <OPTION VALUE="RJ"> RJ </OPTION>
+          <OPTION VALUE="RN"> RN </OPTION>
+          <OPTION VALUE="RO"> RO </OPTION>
+          <OPTION VALUE="RR"> RR </OPTION>
+          <OPTION VALUE="RS"> RS </OPTION>
+          <OPTION VALUE="SC"> SC </OPTION>
+          <OPTION VALUE="SE"> SE </OPTION>
+          <OPTION VALUE="SP"> SP </OPTION>
+          <OPTION VALUE="TO"> TO </OPTION>
+        </SELECT>
+        <BR>
+        E-MAIL .......: 
+        <INPUT TYPE="text" NAME="Mail" SIZE="15" onBlur="Checa()"> <BR>
+        CPF ..........: 
+        <INPUT TYPE="text" NAME="CPF" SIZE="15" onBlur="ChecaCPF()"> <BR>
+        Sexo .........: 
+        <INPUT TYPE="radio" NAME="Sexo" VALUE="Masculino" CHECKED> Masculino 
+        <INPUT TYPE="radio" NAME="Sexo" VALUE="Feminino">          Feminino 
+        <BR><BR><BR>
+        <INPUT TYPE="reset"  VALUE="Apagar Formulário">
+        <INPUT TYPE="submit" VALUE="Enviar Formulário">
+      </TT>
+    </FORM>
+  </BODY>
+
+
+</HTML>

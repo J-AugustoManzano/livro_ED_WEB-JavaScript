@@ -1,0 +1,45 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Evento 6 */
+      function ChecaForm() {
+        with(document.Formulario) {
+          if (Nome.value.length == 0 || Fone.value.length == 0 || 
+              Mail.value.length == 0) {
+            alert('Todos os campos devem estar preenchidos.');
+            return false; }
+          else {
+            alert('OK. O formulário será enviado.');
+            return true; 
+          }
+        }
+      }
+    //-->
+    </SCRIPT>
+
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="Formulario" 
+      ACTION="http://www.provedor.com/form.cgi" METHOD=post
+      onSubmit="return ChecaForm()">
+        Entre com seu Nome: 
+        <INPUT TYPE="text" NAME="Nome" SIZE="35">
+        <BR>
+        Entre com seu Telefone: 
+        <INPUT TYPE="text" NAME="Fone" SIZE="15">
+        <BR>
+        Entre com seu e-mail: 
+        <INPUT TYPE="text" NAME="Mail" SIZE="35">
+        <BR>
+        <INPUT TYPE="submit" VALUE="Enviar Dados">
+    </FORM>
+  </BODY>
+
+</HTML>

@@ -1,0 +1,31 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* String 13 */
+      function MostraMes() {
+        var NESES, POSICAO, MES
+        MESES = 'JanFevMarAbrMaiJunJulAgoSetOutNovDez';
+        POSICAO = document.Formulario.Entra.value;
+        MES = POSICAO - 1;
+        document.Formulario.Saida.value = MESES.substring(MES * 3, MES * 3 + 3);
+      }
+    //-->
+    </SCRIPT>
+
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="Formulario">
+      Entre com um Número: <INPUT TYPE="text" NAME="Entra" SIZE="2">
+      <BR><BR>
+      <INPUT TYPE="button" VALUE="Processar" onClick="MostraMes()">
+      <INPUT TYPE="text" NAME="Saida" SIZE="6">
+    </FORM> 
+  </BODY>
+</HTML>

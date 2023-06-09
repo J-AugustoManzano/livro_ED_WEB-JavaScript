@@ -1,0 +1,33 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Função 2 */
+      function DiaSemana() {
+        var HOJE = new Date();
+        var DIA = HOJE.getDay();
+        var SEMANA = new Array(6);
+        SEMANA[0] = 'Domingo';      
+        SEMANA[1] = 'Segunda-feira';      
+        SEMANA[2] = 'Terça-feira';      
+        SEMANA[3] = 'Quarta-feira';      
+        SEMANA[4] = 'Quinta-feira';      
+        SEMANA[5] = 'Sexta-feira';      
+        SEMANA[6] = 'Sábado';
+        document.write(SEMANA[DIA]);      
+      }
+    //-->
+    </SCRIPT>
+
+  </HEAD>
+
+  <BODY>
+    <INPUT TYPE="button" VALUE="Dia da Semana" onClick="DiaSemana()">    
+  </BODY>
+
+</HTML>

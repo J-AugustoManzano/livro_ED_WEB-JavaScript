@@ -1,0 +1,41 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Evento 3 */
+      function MudaCor(COR) {
+        switch (COR) {
+          case 'Amarelo'  : document.bgColor = 'yellow'; break;
+          case 'Azul'     : document.bgColor = 'blue';   break;
+          case 'Ciano'    : document.bgColor = 'cyan';   break;
+          case 'Verde'    : document.bgColor = 'green';  break;
+          case 'Vermelho' : document.bgColor = 'red';    break;
+          case 'Padrão'   : document.bgColor = 'white';  break;
+        }
+      }
+    //-->
+    </SCRIPT>
+
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="Formulario">
+      <B><I>
+        Selecione uma cor para o fundo da tela:
+      </I></B>
+      <BR><BR> 
+      <INPUT TYPE="radio" NAME="Fundo" onClick="MudaCor('Amarelo')"> Amarelo <BR> 
+      <INPUT TYPE="radio" NAME="Fundo" onClick="MudaCor('Azul')"> Azul <BR>
+      <INPUT TYPE="radio" NAME="Fundo" onClick="MudaCor('Ciano')"> Ciano <BR> 
+      <INPUT TYPE="radio" NAME="Fundo" onClick="MudaCor('Verde')"> Verde <BR>
+      <INPUT TYPE="radio" NAME="Fundo" onClick="MudaCor('Vermelho')"> Vermelho <BR> 
+      <INPUT TYPE="radio" NAME="Fundo" onClick="MudaCor('Padrão')"> Padrão <BR> 
+    </FORM>
+  </BODY>
+
+</HTML>

@@ -1,0 +1,26 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* String 12 */
+      var I;
+      var FRASE = 'O meu computador possui processador Pentium';        
+      var PALAVRA = FRASE.split(' ', 3);
+      var TAMANHO = PALAVRA.length;
+      document.write('A frase possui ' + TAMANHO + ' palavras. <BR><BR>');
+      document.write('Sendo: <BR><BR>');
+      for (I=0; I<=TAMANHO-1; I++) {
+        document.write('PALAVRA[' + I + '] = ' + PALAVRA[I] + '<BR>');
+      }
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

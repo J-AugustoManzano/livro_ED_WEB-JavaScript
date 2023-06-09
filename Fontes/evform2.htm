@@ -1,0 +1,34 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Evento 2 */
+      function Verifica(ALTERACAO) {
+        if (ALTERACAO.value.length > 0) {
+          alert('O campo ' + ALTERACAO.name + ' foi alterado.');
+        }
+      }
+    //-->
+    </SCRIPT>
+
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="Formulario">
+      Entre com seu Nome: 
+      <INPUT TYPE="text" NAME="Nome" SIZE="35" onChange="Verifica(this)">
+      <BR>
+      Entre com seu Telefone: 
+      <INPUT TYPE="text" NAME="Fone" SIZE="15" onChange="Verifica(this)">
+      <BR>
+      Entre com seu e-mail: 
+      <INPUT TYPE="text" NAME="Mail" SIZE="35" onChange="Verifica(this)">
+    </FORM>
+  </BODY>
+
+</HTML>

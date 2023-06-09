@@ -1,0 +1,29 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+   </HEAD>
+
+  <BODY>
+   <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Hora 3 */
+      var NOME = prompt('Entre com seu nome','Digite-o aqui.');
+      var RELOGIO = new Date();
+      var HORA = RELOGIO.getHours();
+      if (HORA <= 11) {
+        document.write('Bom dia, ' + NOME + '.'); }
+      else {
+        if (HORA <= 17) {
+          document.write('Boa tarde, ' + NOME + '.'); }
+        else {
+          document.write('Boa noite, ' + NOME + '.');
+        }
+      }
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

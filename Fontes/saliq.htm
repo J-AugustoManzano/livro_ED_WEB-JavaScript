@@ -1,0 +1,26 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Salario Liquido */
+      var HT, VH, PD, TD, SB, SL;
+      HT = prompt('Entre com as horas trabalhas:','Digite-as aqui.');
+      VH = prompt('Entre com o valor da hora:','Digite-a aqui.');
+      PD = prompt('Entre com o percentual de desconto:','Digite-o aqui.');
+      SB = parseFloat(HT) * parseFloat(VH);
+      TD = (parseFloat(PD) / 100) * SB;
+      SL = SB - TD;
+      document.write('Salário Líquido = ', SL);
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

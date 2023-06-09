@@ -1,0 +1,63 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+    
+  <BODY BGCOLOR="0000AA">
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      var TOTAL = 5;
+      var I, POSICAO = 0;
+      var TEMPO = 3000;
+      var BANNER = new Array();
+      var END = new Array();
+
+      END[0] = 'http://www.banner1.com.br';
+      END[1] = 'http://www.banner2.com.br';
+      END[2] = 'http://www.banner3.com.br';
+      END[3] = 'http://www.banner4.com.br';
+      END[4] = 'http://www.banner5.com.br';
+      for (I = 1; I <= TOTAL; I++) {
+        BANNER[I - 1] = new Image();
+        BANNER[I - 1].src = 'banner' + I + '.gif';
+      }
+
+      function Rotacao() {
+        POSICAO = Math.round(Math.random() * TOTAL);
+        if (POSICAO > TOTAL - 1) {
+          POSICAO = 0;
+        }
+        document.Banner.src = BANNER[POSICAO].src;
+        setTimeout("Rotacao()", TEMPO); 
+      }
+
+      function PegaLink() {
+        if (END[POSICAO].length != 0) {
+          location.href = END[POSICAO];
+        }
+      }
+
+      function MostraStatus() { 
+        window.status = END[POSICAO];
+      }
+    //-->
+    </SCRIPT>
+
+    <A HREF="" onClick="PegaLink();return false" onMouseOver="MostraStatus();return true;" 
+               onMouseOut="window.status='';return true;">
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      POSICAO = Math.round(Math.random() * TOTAL);
+      document.write('<CENTER>');
+      document.write('<IMG SRC="' + BANNER[POSICAO].src + '" ');
+      document.write('WIDTH=468 HEIGHT=60 BORDER=0 NAME="Banner"></A>');
+      document.write('</CENTER>');
+      setTimeout("Rotacao()", TEMPO);
+    //-->
+    </SCRIPT>
+
+  </BODY>
+</HTML>

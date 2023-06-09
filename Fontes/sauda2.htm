@@ -1,0 +1,32 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="MeuFormulario">
+      Entre com o nome ......: <INPUT TYPE="text" NAME="Campo1">
+      Entre com o sobrenome .: <INPUT TYPE="text" NAME="Campo2"><BR>
+      <INPUT TYPE="button" VALUE="Concatenar" onClick="MostraNome()">
+    </FORM> 
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Nome Completo */
+      var NOME;
+      var SOBRENOME;
+      var NOMECOMPLETO;
+      function MostraNome(){
+        NOME = document.MeuFormulario.Campo1.value;
+        SOBRENOME = document.MeuFormulario.Campo2.value;
+        NOMECOMPLETO = NOME + ' ' + SOBRENOME;
+        alert('Oi ' + NOMECOMPLETO);
+      }
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

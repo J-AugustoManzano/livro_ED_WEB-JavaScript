@@ -1,0 +1,36 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Evento onMouseDown */
+      function Aperta() {
+        alert('O botão do Mouse foi acionado');
+      }
+    //-->
+    </SCRIPT>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Evento onMouseUp */
+      function Solta() {
+        alert('O botão do Mouse foi liberado');
+      }
+    //-->
+    </SCRIPT>
+
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="Formulario">
+      Entre com seu Nome: 
+      <INPUT TYPE="button" Value="Clique 1" onMouseDown="Aperta()">
+      <INPUT TYPE="button" Value="Clique 2" onMouseUp="Solta()">
+    </FORM>
+  </BODY>
+
+</HTML>

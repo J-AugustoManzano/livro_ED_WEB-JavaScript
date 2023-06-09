@@ -1,0 +1,44 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Efeito Especial 2 */
+      var TEXTO = 'Estudo Dirigido de JavaScript - por Augusto Manzano';
+      var POSICAO = 1; 
+
+      function RolagemDentro() {
+        window.status = TEXTO.substring(0, POSICAO);
+        if (POSICAO >= TEXTO.length) {
+          POSICAO = 1;
+          window.setTimeout('RolagemFora()', 1000); }
+        else {
+          POSICAO++;
+          window.setTimeout('RolagemDentro()', 50); 
+        } 
+      }
+ 
+      function RolagemFora() {
+         window.status = TEXTO.substring(POSICAO, TEXTO.length);
+         if (POSICAO >= TEXTO.length) {
+           POSICAO = 1;
+           window.setTimeout('RolagemDentro()', 1000); }
+        else {
+           POSICAO++;
+           window.setTimeout('RolagemFora()', 50); 
+          }
+       }
+    //-->
+    </SCRIPT>
+
+  </HEAD>
+
+  <BODY onLoad="RolagemDentro()">
+  </BODY>
+
+</HTML>
+

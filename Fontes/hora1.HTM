@@ -1,0 +1,31 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Hora 1 */
+      var RELOGIO = new Date();
+      var HORA    = RELOGIO.getHours();
+      var MINUTO  = RELOGIO.getMinutes();
+      var SEGUNDO = RELOGIO.getSeconds();
+      if (HORA <= 9) {
+        HORA = '0' + HORA;
+      }
+      if (MINUTO <= 9) {
+        MINUTO = '0' + MINUTO;
+      }
+      if (SEGUNDO <= 9) {
+        SEGUNDO = '0' + SEGUNDO;
+      }
+      document.write(HORA + ':' + MINUTO + ':' + SEGUNDO);
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

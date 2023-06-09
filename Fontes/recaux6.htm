@@ -1,0 +1,38 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <SCRIPT LANGUAGE="Javascript">
+    <!--
+      var MESES = new Array('Janeiro',
+                            'Fevereiro',
+                            'Março',
+                            'Abril',
+                            'Maio',
+                            'Junho',
+                            'Julho',
+                            'Agosto',
+                            'Setembro',
+                            'Outubro',
+                            'Novembro',
+                            'Dezembro');
+      var DATA;
+      var MODIFICACAO = new Date(document.lastModified);
+      var DIA = MODIFICACAO.getDate();
+      var MES = MESES[MODIFICACAO.getMonth()];
+      var ANO = MODIFICACAO.getYear();
+      if (navigator.appName == 'Netscape') {
+        ANO += 1900;
+      }
+      DATA = DIA + ' de ' + MES + ' de ' + ANO;
+      document.write('Última modificação foi em: ' + DATA);
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

@@ -1,0 +1,51 @@
+
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+    /* Efeito Especial 7 */
+    function MostraHorario() {
+      var RELOGIO = new Date();
+      if (RELOGIO.getHours() < 10) {
+        document.images.HoraDez.src = 'digito0.gif';
+        document.images.HoraUni.src = 'digito' + RELOGIO.getHours() + '.gif'; }
+      else {
+        document.images.HoraDez.src = 'digito' + Math.floor(RELOGIO.getHours() / 10) + '.gif';
+        document.images.HoraUni.src = 'digito' + (RELOGIO.getHours() % 10) + '.gif';
+      }
+      if (RELOGIO.getMinutes() < 10) {
+        document.images.MinutoDez.src = 'digito0.gif';
+        document.images.MinutoUni.src = 'digito' + RELOGIO.getMinutes() + '.gif'; }
+      else {
+        document.images.MinutoDez.src = 'digito' + Math.floor(RELOGIO.getMinutes() / 10) + '.gif';
+        document.images.MinutoUni.src = 'digito' + (RELOGIO.getMinutes() % 10) + '.gif';
+      }
+      if (RELOGIO.getSeconds() < 10) {
+        document.images.SegundoDez.src = 'digito0.gif';
+        document.images.SegundoUni.src = 'digito' + RELOGIO.getSeconds() + '.gif'; }
+      else {
+        document.images.SegundoDez.src = 'digito' + Math.floor(RELOGIO.getSeconds() / 10) + '.gif';
+        document.images.SegundoUni.src = 'digito' + (RELOGIO.getSeconds() % 10) + '.gif';
+      }
+      setTimeout('MostraHorario()', 1000);
+    }
+  //-->
+  </SCRIPT>
+
+  <BODY BGCOLOR="#000000" onLoad="MostraHorario()">
+    <IMG SRC="digito0.gif" NAME="HoraDez">
+    <IMG SRC="digito0.gif" NAME="HoraUni">
+    <IMG SRC="ponto.gif"   NAME="SeparaMin">
+    <IMG SRC="digito0.gif" NAME="MinutoDez">
+    <IMG SRC="digito0.gif" NAME="MinutoUni">
+    <IMG SRC="ponto.gif"   NAME="SeparaSeg">
+    <IMG SRC="digito0.gif" NAME="SegundoDez">
+    <IMG SRC="digito0.gif" NAME="SegundoUni">
+  </BODY>
+</HTML>

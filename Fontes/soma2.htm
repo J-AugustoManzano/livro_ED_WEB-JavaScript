@@ -1,0 +1,32 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="MeuFormulario">
+      Entre com o primeiro valor: <INPUT TYPE="text" NAME="Campo1">
+      Entre com o segundo valor: <INPUT TYPE="text" NAME="Campo2"><BR>
+      <INPUT TYPE="button" VALUE="Somar" onClick="Soma()">
+    </FORM> 
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Soma - Versao 2 */
+      var NUMERO1;
+      var NUMERO2;
+      var RESPOSTA;
+      function Soma() {
+        NUMERO1 = document.MeuFormulario.Campo1.value;
+        NUMERO2 = document.MeuFormulario.Campo2.value;
+        RESPOSTA = parseInt(NUMERO1) + parseInt(NUMERO2);
+        alert('A soma equivale: ' + RESPOSTA.toString());
+      }
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

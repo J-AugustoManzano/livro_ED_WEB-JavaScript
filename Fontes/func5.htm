@@ -1,0 +1,39 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      /* Função 5 */
+      function Fatorial(N) {
+        var I, F = 1;
+        for (I=1; I<=N; I++) {
+          F*=I;        
+        }
+        return(F);
+      }
+    //-->
+    </SCRIPT>
+
+    <SCRIPT LANGUAGE="JavaScript">   
+    <!--
+      function Resposta() { 
+        document.Fator.Saida.value = Fatorial(document.Fator.Entra.value);
+      }
+    //-->
+    </SCRIPT>
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="Fator">
+      Entre com um Número: <INPUT TYPE="text" NAME="Entra" SIZE="2">
+      <BR><BR>
+      <INPUT TYPE="button" VALUE="Processar" onClick="Resposta()">
+      <INPUT TYPE="text" NAME="Saida" Size = "10">
+    </FORM>
+  </BODY>
+
+</HTML>
