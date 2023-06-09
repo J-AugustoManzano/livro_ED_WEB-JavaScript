@@ -1,0 +1,65 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <P>
+      Para mudar a cor de fundo, digite uma das letras:
+      <BR><BR><BR>
+      [V]ermelho <BR><BR>
+      [A]marelo <BR><BR>
+      a[Z]ul <BR><BR>
+      v[E]rde <BR><BR>
+      c[I]ano <BR><BR>
+    </P>
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Cross-Browser 8 - Código Híbrido */
+      function PoeCor(TECLA) {
+        if (document.layers) {
+          if (TECLA.which == 118 || TECLA.which ==  86) {   
+             document.bgColor='red';
+          }
+          if (TECLA.which ==  97 || TECLA.which ==  65) {   
+             document.bgColor='yellow';
+          }
+          if (TECLA.which == 122 || TECLA.which ==  90) {   
+             document.bgColor='blue';
+          }
+          if (TECLA.which == 101 || TECLA.which ==  69) {   
+             document.bgColor='green';
+          }
+          if (TECLA.which == 105 || TECLA.which ==  73) {   
+             document.bgColor='cyan';
+          }
+        }
+        if (document.all) {
+          if (event.keyCode == 118 || event.keyCode ==  86) {   
+             document.bgColor='red';
+          }
+          if (event.keyCode ==  97 || event.keyCode ==  65) {   
+             document.bgColor='yellow';
+          }
+          if (event.keyCode == 122 || event.keyCode ==  90) {   
+             document.bgColor='blue';
+          }
+          if (event.keyCode == 101 || event.keyCode ==  69) {   
+             document.bgColor='green';
+          }
+          if (event.keyCode == 105 || event.keyCode ==  73) {   
+             document.bgColor='cyan';
+          }
+        }
+      }
+      document.onkeypress = PoeCor;
+    // -->
+    </SCRIPT>
+  </BODY>
+
+</HTML>
+

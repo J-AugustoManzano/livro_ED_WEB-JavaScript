@@ -1,0 +1,64 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="MeuFormulario">
+      Entre com o mês: <INPUT TYPE="text" NAME="LeMes" SIZE="2"><BR>
+      <BR>
+      <INPUT TYPE="button" VALUE="Processar" onClick="VerificaMes()">
+      <INPUT TYPE="text" NAME="Saida" SIZE="18">
+    </FORM> 
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Condição 6 */
+      var MES;
+      function VerificaMes() {
+        MES = parseInt(document.MeuFormulario.LeMes.value);
+        if (MES == 1) {
+          document.MeuFormulario.Saida.value = 'Janeiro';
+        } 
+        if (MES == 2) {
+          document.MeuFormulario.Saida.value = 'Fevereiro';
+        } 
+        if (MES == 3) {
+          document.MeuFormulario.Saida.value = 'Março';
+        } 
+        if (MES == 4) {
+          document.MeuFormulario.Saida.value = 'Abril';
+        } 
+        if (MES == 5) {
+          document.MeuFormulario.Saida.value = 'Maio';
+        } 
+        if (MES == 6) {
+          document.MeuFormulario.Saida.value = 'Junho';
+        } 
+        if (MES == 7) {
+          document.MeuFormulario.Saida.value = 'Julho';
+        } 
+        if (MES == 8) {
+          document.MeuFormulario.Saida.value = 'Agosto';
+        } 
+        if (MES == 9) {
+          document.MeuFormulario.Saida.value = 'Setembro';
+        } 
+        if (MES == 10) {
+          document.MeuFormulario.Saida.value = 'Outubro';
+        } 
+        if (MES == 11) {
+          document.MeuFormulario.Saida.value = 'Novembro';
+        } 
+        if (MES == 12) {
+          document.MeuFormulario.Saida.value = 'Dezembro';
+        } 
+      }
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

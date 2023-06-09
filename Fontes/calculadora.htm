@@ -1,0 +1,265 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+
+      var TOTAL = 0;
+      var NOVO_NUMERO = false;
+      var CALCULO = "";
+
+      function Tecla(NUMERO) {
+        if (NOVO_NUMERO == true) {
+          document.Teclado.Saida.value = NUMERO;
+          NOVO_NUMERO = false; }
+        else {
+          if (document.Teclado.Saida.value == "0") {
+            document.Teclado.Saida.value = NUMERO; }
+          else {
+            document.Teclado.Saida.value += NUMERO;
+          }
+        }
+      }
+
+      function Inverte() {
+        document.Teclado.Saida.value = 
+        parseFloat(document.Teclado.Saida.value) * -1;
+      }
+
+      function Decimal() {
+        if (NOVO_NUMERO == true) {
+          document.Teclado.Saida.value = "0.";
+          NOVO_NUMERO = false; }
+        else {
+          if (document.Teclado.Saida.value.indexOf(".") == -1) {
+            document.Teclado.Saida.value += ".";
+          }
+        }  
+      }
+  
+      function Limpa() {
+        TOTAL = 0;
+        document.Teclado.Saida.value = "0";
+        NOVO_NUMERO = true;
+      }
+
+      function Porcentagem() {
+        document.Teclado.Saida.value = 
+        (parseFloat(document.Teclado.Saida.value) / 100) * 
+        parseFloat(TOTAL);
+      }
+
+      function Raiz() {
+        document.Teclado.Saida.value = 
+        Math.sqrt(parseFloat(document.Teclado.Saida.value));
+      }
+
+      function Operacao(OPERADOR) {
+        NOVO_NUMERO = true;
+        switch (CALCULO) {
+          case '+' : TOTAL += parseFloat(document.Teclado.Saida.value); 
+                     break;
+          case '-' : TOTAL -= parseFloat(document.Teclado.Saida.value); 
+                     break;
+          case '/' : TOTAL /= parseFloat(document.Teclado.Saida.value); 
+                     break;
+          case '*' : TOTAL *= parseFloat(document.Teclado.Saida.value); 
+                     break;
+          default  : TOTAL  = parseFloat(document.Teclado.Saida.value);
+        }
+        document.Teclado.Saida.value = TOTAL;
+        CALCULO = OPERADOR;
+      }
+
+    //-->
+    </SCRIPT>
+
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="Teclado" ACTION="">
+      <DL><DL><DL><DL><DL><DL>
+        <DD>
+        <TABLE WIDTH=246 BORDER=1 CELLPADDING=4 CELLSPACING=3 
+               STYLE="page-break-before: always">
+          <COL WIDTH=230>
+          <THEAD>
+            <TR>
+              <TD WIDTH=230 VALIGN=TOP>
+                <P>
+                  <INPUT TYPE="text" NAME="Saida" VALUE="0" SIZE=32 
+                         STYLE="font-size: 9pt">
+                </P>
+              </TD>
+            </TR>
+          </THEAD>
+        </TABLE>
+        <DD>
+        <TABLE WIDTH=246 BORDER=1 CELLPADDING=4 CELLSPACING=3>
+          <COL WIDTH=38>
+          <COL WIDTH=38>
+          <COL WIDTH=38>
+          <COL WIDTH=38>
+          <COL WIDTH=38>
+          <THEAD>
+            <TR VALIGN=TOP>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtSete" VALUE=" 7 " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Tecla(7)">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtOito" VALUE=" 8 " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Tecla(8)">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtNove" VALUE=" 9 " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Tecla(9)">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P> 
+                  <INPUT TYPE="button" NAME="BtAdicao" VALUE=" + " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Operacao('+')">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtLimpa" VALUE=" C " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Limpa()">
+                </P>
+              </TD>
+            </TR>
+          </THEAD>
+          <TBODY>
+            <TR VALIGN=TOP>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtQuatro" VALUE=" 4 " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Tecla(4)">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtCinco" VALUE=" 5 " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Tecla(5)">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtSeis" VALUE=" 6 " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt"  onClick="Tecla(6)">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtSub" VALUE=" - " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Operacao('-')">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtPorcent" VALUE=" % " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Porcentagem()">
+                </P>
+              </TD>
+            </TR>
+            <TR VALIGN=TOP>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtUm" VALUE=" 1 " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Tecla(1)">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtDois" VALUE=" 2 " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Tecla(2)">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtTres" VALUE=" 3 " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Tecla(3)">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtDivide" VALUE=" : " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Operacao('/')">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtRaiz" VALUE="R Q" 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Raiz()">
+                </P>
+              </TD>
+            </TR>
+            <TR VALIGN=TOP>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtZero" VALUE=" 0 " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Tecla(0)">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtInverte" VALUE="+/-" 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Inverte()">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtPonto" VALUE=" . " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Decimal()">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtMult" VALUE=" X " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Operacao('*')">
+                </P>
+              </TD>
+              <TD WIDTH=38>
+                <P>
+                  <INPUT TYPE="button" NAME="BtIgual" VALUE=" = " 
+                         STYLE="font-family: 'Courier New', monospace; 
+                         font-size: 9pt" onClick="Operacao('=')">
+                </P>
+              </TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+      </DL></DL></DL></DL></DL></DL>
+    </FORM>
+  </BODY>
+
+</HTML>

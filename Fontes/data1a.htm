@@ -1,0 +1,25 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Data 1 */
+      var DATA = new Date();
+      var DIA  = DATA.getDate();
+      var MES  = DATA.getMonth();
+      var ANO  = DATA.getYear();
+      if (ANO < 1000) {
+        ANO += 1900;
+      }
+      document.write(DIA + '/' + MES + '/' + ANO);
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

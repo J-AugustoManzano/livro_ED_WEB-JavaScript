@@ -1,0 +1,39 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="MeuFormulario">
+      Entre com um valor para "A": <INPUT TYPE="text" NAME="Entra_A"><BR>
+      Entre com um valor para "B": <INPUT TYPE="text" NAME="Entra_B"><BR>
+      <BR>
+      <INPUT TYPE="button" VALUE="Ordenar" onClick="Ordena()">
+      <BR><BR>
+      O valor de "A" é: <INPUT TYPE="text" NAME="Saida_A"><BR>
+      O valor de "B" é: <INPUT TYPE="text" NAME="Saida_B"><BR>
+    </FORM> 
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Condição 2 */
+      var A, B, X;
+      function Ordena() {
+        A = document.MeuFormulario.Entra_A.value;
+        B = document.MeuFormulario.Entra_B.value;
+        if (A > B) {
+          X = A;
+          A = B;
+          B = X;
+        }
+        document.MeuFormulario.Saida_A.value = A;
+        document.MeuFormulario.Saida_B.value = B;
+      }
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

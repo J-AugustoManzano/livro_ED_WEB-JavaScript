@@ -1,0 +1,78 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!-- 
+      function Calendario() {
+        var INICIO, I, COLUNA, DIAS, TITULO;
+        var MESES   = 'JanFevMarAbrMaiJunJulAgoSetOutNovDez';
+        var HOJE    = new Date();
+        var PRIMDIA = new Date();
+        var ULTIDIA = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+        var ANO     = HOJE.getYear();
+        var DIA     = HOJE.getDate();
+        if (ANO < 1000) {
+          ANO += 1900;
+        }
+        TITULO  = MESES.substr(HOJE.getMonth()*3, 3) + '/' + ANO;
+        if (((ANO % 4 == 0) && (ANO % 100 != 0)) || (ANO % 400 == 0)) {
+          ULTIDIA[1] = 29;
+        }
+        DIAS = ULTIDIA[HOJE.getMonth()];
+        PRIMDIA.setDate(1);
+        INICIO = PRIMDIA.getDay();
+        document.write('<CENTER>');
+        document.write('<TABLE BORDER="3" CELLSPACING="3" CELLPADDING="3">');
+        document.write('<TR><TH COLSPAN=7>');
+        document.write(TITULO.fixed());
+        document.write('<TR><TH>');
+        document.write('Dom'.fixed() + '<TH>');
+        document.write('Seg'.fixed() + '<TH>');
+        document.write('Ter'.fixed() + '<TH>');
+        document.write('Qua'.fixed() + '<TH>');
+        document.write('Qui'.fixed() + '<TH>');
+        document.write('Sex'.fixed() + '<TH>');
+        document.write('Sab'.fixed() + '<TH>');
+        document.write('<TR>'); 
+        COLUNA = 0;
+        for (I=0; I<INICIO; I++) {
+          document.write('<TD>');
+          COLUNA++;
+        }
+        for (I=1; I<=DIAS; I++) {
+          document.write('<TD ALIGN="center">');
+          if (COLUNA == 0 && I == DIA) {
+            document.write(DIA.toString().fontcolor('blue').bold()); }
+          else {
+            if (COLUNA == 0) {
+              document.write(I.toString().bold()); }
+            else {
+              if (I == DIA) {
+                document.write(I.toString().fontcolor('blue').bold()); }
+              else {
+                document.write(I.toString().fontcolor('black'));
+              }
+            }          
+          }
+          COLUNA++;
+          if (COLUNA == 7) {
+            document.write('<TR>'); 
+            COLUNA = 0;
+          }
+        }
+        document.write('</TABLE>');
+        document.write('</CENTER>');
+      }
+    // -->
+    </SCRIPT>
+
+  </HEAD>
+
+  <BODY onLoad = "Calendario()">
+  </BODY>
+
+</HTML>

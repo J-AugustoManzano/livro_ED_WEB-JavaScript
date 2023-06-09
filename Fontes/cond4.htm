@@ -1,0 +1,38 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="MeuFormulario">
+      Entre com seu NOME: <INPUT TYPE="text" NAME="CampoNome"><BR>
+      Entre com seu SEXO: <INPUT TYPE="text" NAME="CampoSexo"><BR>
+      <BR>
+      <INPUT TYPE="button" VALUE="Entrar" onClick="Saudacao()">
+      <BR><BR>
+      Saudação: <INPUT TYPE="text" NAME="CampoSaudacao" SIZE="50">
+    </FORM> 
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Condição 4 */
+      var SEXO, NOME, SAUDACAO;
+      function Saudacao() {
+        NOME = document.MeuFormulario.CampoNome.value;
+        SEXO = document.MeuFormulario.CampoSexo.value;
+        if (SEXO.toUpperCase( ) == 'MASCULINO') {
+          SAUDACAO = 'Seja bem vindo, ' + NOME;
+          document.MeuFormulario.CampoSaudacao.value = SAUDACAO; }
+        else {
+          SAUDACAO = 'Seja bem vinda, ' + NOME;
+          document.MeuFormulario.CampoSaudacao.value = SAUDACAO; 
+        }
+      }
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

@@ -1,0 +1,35 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="MeuFormulario">
+      Entre com um número inteiro: <INPUT TYPE="text" NAME="Entra">
+      <BR><BR>
+      <INPUT TYPE="button" VALUE="Processar" onClick="Checa()">
+      <BR><BR>
+      <INPUT TYPE="text" NAME="Saida" SIZE="13">
+    </FORM> 
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Condição 9 */
+      function Checa() {
+        var N, RESTO;
+        N = parseInt(document.MeuFormulario.Entra.value);
+        RESTO = N % 2;
+        if (RESTO == 0) {
+          document.MeuFormulario.Saida.value = 'Número Par'; }
+        else {
+          document.MeuFormulario.Saida.value = 'Número Impar';
+        }
+      }
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

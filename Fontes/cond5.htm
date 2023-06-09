@@ -1,0 +1,46 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <FORM NAME="MeuFormulario">
+      Entre com o lado "A": <INPUT TYPE="text" NAME="LadoA"><BR>
+      Entre com o lado "B": <INPUT TYPE="text" NAME="LadoB"><BR>
+      Entre com o lado "C": <INPUT TYPE="text" NAME="LadoC"><BR>
+      <BR>
+      <INPUT TYPE="button" VALUE="Processar" onClick="Triangulo()">
+      <BR><BR>
+      <INPUT TYPE="text" NAME="Saida" SIZE="25">
+    </FORM> 
+
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Condição 5 */
+      var A, B, C;
+      function Triangulo() {
+        A = parseFloat(document.MeuFormulario.LadoA.value);
+        B = parseFloat(document.MeuFormulario.LadoB.value);
+        C = parseFloat(document.MeuFormulario.LadoC.value);
+        if (A<B+C && B<A+C && C<A+B) {
+          if (A==B && B==C) {
+            document.MeuFormulario.Saida.value = 'Triângulo Equilátero'; } 
+          else {
+            if (A==B || A==C || C==B) {
+              document.MeuFormulario.Saida.value = 'Triângulo Isósceles'; } 
+            else {
+              document.MeuFormulario.Saida.value = 'Triângulo Escaleno'; }
+            } 
+          }
+        else {
+          document.MeuFormulario.Saida.value = 'Não é um triângulo.';
+        }
+      }
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

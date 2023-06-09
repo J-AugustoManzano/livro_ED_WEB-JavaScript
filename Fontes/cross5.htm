@@ -1,0 +1,39 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Cross-Browser 5 - Rotina Híbrida */
+      function PegaBotao(BOTAO) {
+        var MENSAGEM = 'Sinto muito, este código não pode ser apresentado';
+        /* Bloqueia Microsoft Internet Explorer */
+
+        if (document.all) {
+          if (event.button == 2) {
+            alert(MENSAGEM);
+          }
+        }
+
+        /* Bloqueia Netscape Navigator */
+
+        if (document.layers) {
+          if (BOTAO.which == 3) {
+            alert(MENSAGEM);
+          }
+        }
+        return false;
+      }
+      document.onmousedown = PegaBotao;
+    // -->
+    </SCRIPT>
+
+  </BODY>
+
+</HTML>
+

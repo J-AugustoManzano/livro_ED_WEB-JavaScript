@@ -1,0 +1,24 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Cross-Browser 7 - Apenas Netscape Navigator */
+      function PegaTecla(TECLA) {
+        var CARACTERE = String.fromCharCode(TECLA.which);
+        alert('Acionou o caractere: ' + CARACTERE + ', correspondente ao código: ' + TECLA.which); 
+      }
+      document.onkeypress = PegaTecla;
+    // -->
+    </SCRIPT>
+
+  </BODY>
+
+</HTML>
+

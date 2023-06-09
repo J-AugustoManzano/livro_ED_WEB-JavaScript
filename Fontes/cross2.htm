@@ -1,0 +1,25 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Cross-Browser 2 */
+      var PROGRAMA = navigator.appName;
+      var IDIOMA;
+      if (PROGRAMA == 'Netscape') {
+        IDIOMA = navigator.language; }
+      else {
+        IDIOMA = navigator.userLanguage;
+      }
+      document.write(IDIOMA); 
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>

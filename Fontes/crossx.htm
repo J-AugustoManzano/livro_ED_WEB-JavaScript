@@ -1,0 +1,44 @@
+<HTML>
+  <HEAD>
+
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+  function Imprimir() {
+    if (window.print) {
+      window.print(); }
+    else {
+      window.imprime();
+    }
+  //-->
+  </SCRIPT>
+
+  <SCRIPT LANGUAGE="VBScript">
+  <!--
+    Sub Imprime
+      On Error Resume Next
+      WB.ExecWB 6, 1
+      If (Err.Number <> 0) Then
+        If (document.all) Then 
+          Exit Sub
+        Else  
+          Alert "Use o botão de Impressão de seu Browser"
+          Exit Sub
+        End If
+      End If
+    End Sub
+  //-->
+  </SCRIPT>
+
+  </HEAD>
+  <BODY>
+
+    <FORM>
+      <INPUT TYPE="button" VALUE="Imprimir" onClick="Imprimir();">
+    </FORM>
+   
+    <OBJECT ID="WB" WIDTH=0 HEIGHT=0 
+            CLASSID="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2">
+    </OBJECT>
+
+  </BODY>
+</HTML>

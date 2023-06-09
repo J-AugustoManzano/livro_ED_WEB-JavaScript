@@ -1,0 +1,38 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>
+      Estudo Dirigido de JavaScript
+    </TITLE>
+  </HEAD>
+
+  <BODY>
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+      /* Data 3 */
+      var DATA = new Date();
+      var DIA  = DATA.getDate();
+      var MES  = DATA.getMonth();
+      var ANO  = DATA.getYear();
+      var MESES = new Array(11);
+      MESES[0]  = 'Janeiro';
+      MESES[1]  = 'Fevereiro';
+      MESES[2]  = 'Março';
+      MESES[3]  = 'Abril';
+      MESES[4]  = 'Maio';
+      MESES[5]  = 'Junho';
+      MESES[6]  = 'Julho';
+      MESES[7]  = 'Agosto';
+      MESES[8]  = 'Setembro';
+      MESES[9]  = 'Outubro';
+      MESES[10] = 'Novembro';
+      MESES[11] = 'Dezembro';
+      if (ANO < 1000) {
+        ANO += 1900;
+      }
+      document.write(DIA + ' de ' + MESES[MES] + ' de ' + ANO);
+    //-->
+    </SCRIPT>
+  </BODY>
+
+</HTML>
